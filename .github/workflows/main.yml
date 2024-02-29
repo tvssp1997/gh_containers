@@ -1,0 +1,17 @@
+name: CodeQL Analysis
+
+on:
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+
+      - name: Analyze
+        uses: github/codeql-action/analyze@v1
